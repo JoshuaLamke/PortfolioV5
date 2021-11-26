@@ -1,5 +1,5 @@
-# Getting Started with Create React App
-
+# Joshua Lamke's Portfolio
+## Created using react and typescript
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
