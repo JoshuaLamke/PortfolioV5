@@ -44,6 +44,9 @@ export const AboutBodyStyledContainer = styled.div`
     flex-direction: column;
     flex: 1;
     align-items: center;
+    @media Screen and (max-width: 300px) {
+        margin-top: 1rem;
+    }
 `
 
 export const AboutBodyStyled = styled.div`
@@ -81,9 +84,6 @@ export const AboutBodyStyled = styled.div`
 
     @media Screen and (max-width: 425px) {
         width: 90vw;
-        p, span, li {
-            font-size: 0.8rem;
-        }
     }
 `
 
@@ -119,5 +119,9 @@ export const AboutSkillsStyledGrid = styled.div`
         cursor: pointer;
         color: black;
         opacity: 0.5;
+    }
+
+    @media Screen and (max-width: 300px) {
+        grid-template-columns: repeat(1, 1fr);
     }
 `

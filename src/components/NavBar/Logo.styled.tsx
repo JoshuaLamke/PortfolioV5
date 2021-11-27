@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledLogo = styled.a`
-  padding: 1rem 0;
   color: #6f6ffc;
   text-decoration: none;
   font-weight: 800;

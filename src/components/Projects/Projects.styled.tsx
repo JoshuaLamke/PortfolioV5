@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ProjectsStyled = styled.div`
-    height: 90vh;
     width: 100vw;
     display: flex;
     flex-direction: column;

@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import './app.css';
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
+import Work from './components/Work/Work';
 
 interface Props {
 
@@ -14,14 +15,18 @@ const App: React.FC<Props> = () => {
     <div>
         <div id="home"></div>
         <NavBar routes={[
-            {title: "About", to:"#about"},
-            {title: "Projects", to:"#projects"},
+            {title: "ABOUT", to:"#about"},
+            {title: "PROJECTS", to:"#projects"},
+            {title: "EXPERIENCE", to: "#experience"},
+            {title: "CONTACT", to: "#contact"}
         ]}/>
         <Home />
         <div id="about"></div>
         <About />
         <div id="projects"></div>
         <Projects />
+        <div id="experience"></div>
+        <Work />
 
     </div>
   );

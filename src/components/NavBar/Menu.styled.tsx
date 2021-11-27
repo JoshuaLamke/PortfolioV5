@@ -14,11 +14,13 @@ export const StyledMenu = styled.div<Props>`
         overflow: hidden;
         padding-right: 0;
         flex-direction: column;
-        justify-content: flex-start;
-        height: ${({ isOpen }) => (isOpen ? "90vh" : "0")};
+        justify-content: center;
+        height: ${({ isOpen }) => (isOpen ? "100vh" : "0")};
         transition: height 0.3s ease-in;
         backdrop-filter: blur(5px);
-        width: 100%;
+        -webkit-backdrop-filter: blur(5px);
+        background: rgba(0,0,0,0.8);
+        width: 100vw;
     }
 `;
 
