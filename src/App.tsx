@@ -1,10 +1,11 @@
 import React from 'react';
 import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
-import './app.css';
+import './App.css';
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Work from './components/Work/Work';
+import Contact from './components/Contact/Contact';
 
 interface Props {
 
@@ -21,13 +22,14 @@ const App: React.FC<Props> = () => {
             {title: "CONTACT", to: "#contact"}
         ]}/>
         <Home />
-        <div id="about"></div>
+        <div id="about" className="mb-2"></div>
         <About />
-        <div id="projects"></div>
+        <div id="projects" className="mb-2"></div>
         <Projects />
-        <div id="experience"></div>
+        <div id="experience" className="mb-2"></div>
         <Work />
-
+        <div id="contact" className="mb-2"></div>
+        <Contact />
     </div>
   );
 }

@@ -3,12 +3,13 @@ import {StyledMenuLink} from './MenuLink.styled';
 
 interface Props {
     link: string;
+    setIsOpen: (val: boolean) => void;
 }
 
-const MenuLink: React.FC<Props> = ({children, link}) => {
+const MenuLink: React.FC<Props> = ({children, link, setIsOpen}) => {
 
     return (
-        <StyledMenuLink href={link}>
+        <StyledMenuLink href={link} onClick={() => setIsOpen(false)}>
             {children}
         </StyledMenuLink>
     )

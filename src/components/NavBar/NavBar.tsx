@@ -25,7 +25,7 @@ const NavBar: React.FC<Props> = ({color, logoText, routes, routesColor}) => {
             <Menu isOpen={isOpen}>
                 {routes.map((route, index) => {
                     return (
-                        <MenuLink link={route.to}>
+                        <MenuLink link={route.to} setIsOpen={setIsOpen}>
                             <span className="me-1">0{index+1}.</span>{route.title.toUpperCase()}
                         </MenuLink>
                     )

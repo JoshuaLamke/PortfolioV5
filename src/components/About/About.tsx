@@ -24,7 +24,7 @@ const About: React.FC<Props> = () => {
                         </p>
                         <p>
                             I am currently a senior at <span>George Mason University</span> studying Computer Science. 
-                            Along in school, I also work as a web developer.
+                            Along with school, I also work as a web developer.
                             Here are a few technologies I enjoy using:
                         </p>
                         <AboutSkillsStyledGrid>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface Props {
-    onClick: () => void;
+    
 }
 
 export const StyledHamburger = styled.div<Props>`
