@@ -18,14 +18,14 @@ const NavBar: React.FC<Props> = ({color, logoText, routes, routesColor}) => {
 
     return (
         <Nav>
-            <Logo link="#home">
+            <Logo link="#home" setOpened={setIsOpen}>
                 Joshua<span>Lamke</span>
             </Logo>
             <Hamburger setOpened={setIsOpen} opened={isOpen} />
             <Menu isOpen={isOpen}>
                 {routes.map((route, index) => {
                     return (
-                        <MenuLink link={route.to} setIsOpen={setIsOpen}>
+                        <MenuLink link={route.to} key={index} setIsOpen={setIsOpen}>
                             <span className="me-1">0{index+1}.</span>{route.title.toUpperCase()}
                         </MenuLink>
                     )

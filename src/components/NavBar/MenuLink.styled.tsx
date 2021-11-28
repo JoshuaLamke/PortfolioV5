@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledMenuLink = styled.a`
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.75rem;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -18,6 +18,7 @@ export const StyledMenuLink = styled.a`
     }
     @media Screen and (max-width: 768px) {
         width: 100vw;
+        height: 15vh;
         display: flex;
         flex-direction: column;
     }

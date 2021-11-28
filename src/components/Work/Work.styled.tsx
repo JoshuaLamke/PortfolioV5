@@ -62,7 +62,9 @@ export const WorkButtonStyled = styled.button<Props>`
     &:hover {
         background-color: rgba(0,0,0,0.8);
         color: #6f6ffc;
-        opacity: 0.5;
+        opacity: ${props => props.clicked ? "1" : "0.8"};
+        border-top: ${props => props.clicked ? "2px solid #6f6ffc" : "none"};
+        border-bottom: ${props => props.clicked ? "2px solid #6f6ffc" : "none"};
     }
 
     background-color: ${props => props.clicked ? "rgba(0,0,0,0.8)" : "none"};

@@ -14,8 +14,8 @@ export const StyledMenu = styled.div<Props>`
         overflow: hidden;
         padding-right: 0;
         flex-direction: column;
-        justify-content: center;
-        height: ${({ isOpen }) => (isOpen ? "100vh" : "0")};
+        justify-content: flex-start;
+        height: ${({ isOpen }) => (isOpen ? "95vh" : "0")};
         transition: height 0.3s ease-in;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyledContact, StyledContactContainer } from './Contact.styled';
+import { ContactHeaderStyled, StyledContact, StyledContactContainer } from './Contact.styled';
 import emailjs from 'emailjs-com';
 import {BsGithub, BsLinkedin} from 'react-icons/bs';
 
@@ -27,7 +27,6 @@ const Contact: React.FC<Props> = () => {
                     console.log(result.text);
                     localStorage.setItem("sent", "true");
                     setSent(true);
-                    console.log("Sent is now true")
                 }, (error) => {
                     console.log(error.text);
                 });
@@ -49,26 +48,41 @@ const Contact: React.FC<Props> = () => {
         <div className="d-flex flex-column">
             {sent ?
                 <div className="d-flex flex-column align-items-center px-2" style={{color: "#6f6ffc", background: "black", height: "90vh"}}>
-                    <h2 className="mt-4 text-center">Thanks For Reaching Out!</h2>
-                    <h6 className="mt-2 text-center">Due to me using a free email service I must limit to 1 email per person.</h6>
-                    <div style={{flex: 1}}></div>
-                    <div className="w-100 text-white d-flex justify-content-center">
-                        <p className="mx-1">Created By Joshua Lamke</p>
-                        <div>
-                            <a href="https://github.com/JoshuaLamke" className="mx-2" target="_blank" rel="noreferrer">
-                                <BsGithub color="white"/>
-                            </a>
-                            <a href="https://www.linkedin.com/in/joshua-lamke-742166166/" className="mx-2" target="_blank" rel="noreferrer">
-                                <BsLinkedin color="white"/>
-                            </a>
+                    <StyledContact>
+                        <ContactHeaderStyled>
+                            <span>04 </span>
+                            <h2>Contact</h2>
+                            <hr />
+                        </ContactHeaderStyled>
+                        <h2 className="mt-4 mx-2 text-center">Thanks For Reaching Out!</h2>
+                        <h4 className="my-2 mx-4 text-center">
+                            Due to me using a free email service I must limit to 1 email per person.
+                            Please send any additional emails to:
+                        </h4>
+                        <h4 className="my-2 mx-4 text-white text-center">joshua.lamke@gmail.com</h4>
+                        <div style={{flex: 1}}></div>
+                        <div className="w-100 text-white d-flex justify-content-center">
+                            <p className="mx-1" style={{color: "#6f6ffc"}}>Created By Joshua Lamke</p>
+                            <div>
+                                <a href="https://github.com/JoshuaLamke" className="mx-2" target="_blank" rel="noreferrer">
+                                    <BsGithub color="#6f6ffc" size="25px"/>
+                                </a>
+                                <a href="https://www.linkedin.com/in/joshua-lamke-742166166/" className="mx-2" target="_blank" rel="noreferrer">
+                                    <BsLinkedin color="#6f6ffc" size="25px"/>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                    </StyledContact>
                 </div>
                 :
-                <StyledContact className="d-flex flex-column align-items-center">
+                <StyledContact>
+                    <ContactHeaderStyled>
+                        <span>04 </span>
+                        <h2>Contact</h2>
+                        <hr />
+                    </ContactHeaderStyled>
                     <StyledContactContainer>
-                        <h2 className="mt-4">Contact Me</h2>
-                        <form className="d-flex flex-column w-75" onSubmit={(e) => handleSubmit(e)}>
+                        <form className="d-flex flex-column" onSubmit={(e) => handleSubmit(e)}>
                             <div className="form-group">
                                 <label htmlFor="name">Name</label>
                                 <input className="form-control" value={email.name} required type="text" onChange={(e) => setEmail({...email, name: e.target.value})} name="name" placeholder="Your Name" />
@@ -90,13 +104,13 @@ const Contact: React.FC<Props> = () => {
                     </StyledContactContainer>
                     <div style={{flex: 1}}></div>
                     <div className="w-100 text-white d-flex justify-content-center">
-                        <p className="mx-1">Created By Joshua Lamke</p>
+                        <p className="mx-1" style={{color: "#6f6ffc"}}>Created By Joshua Lamke</p>
                         <div>
                             <a href="https://github.com/JoshuaLamke" className="mx-2" target="_blank" rel="noreferrer">
-                                <BsGithub color="white"/>
+                                <BsGithub color="#6f6ffc" size="25px"/>
                             </a>
                             <a href="https://www.linkedin.com/in/joshua-lamke-742166166/" className="mx-2" target="_blank" rel="noreferrer">
-                                <BsLinkedin color="white"/>
+                                <BsLinkedin color="#6f6ffc" size="25px"/>
                             </a>
                         </div>
                     </div>
