@@ -19,7 +19,8 @@ const App: React.FC<Props> = () => {
             {title: "ABOUT", to:"#about"},
             {title: "PROJECTS", to:"#projects"},
             {title: "EXPERIENCE", to: "#experience"},
-            {title: "CONTACT", to: "#contact"}
+            {title: "CONTACT", to: "#contact"},
+            {title: "RESUME", to: "pdf"},
         ]}/>
         <Home />
         <div id="about" className="mb-2"></div>

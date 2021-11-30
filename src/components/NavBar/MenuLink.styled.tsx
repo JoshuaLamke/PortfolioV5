@@ -16,7 +16,7 @@ export const StyledMenuLink = styled.a`
         color: #6f6ffc;
         font-size: 12px;
     }
-    @media Screen and (max-width: 768px) {
+    @media Screen and (max-width: 950px) {
         width: 100vw;
         height: 15vh;
         display: flex;

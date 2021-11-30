@@ -10,9 +10,10 @@ export const StyledMenu = styled.div<Props>`
     align-items: center;
     position: relative;
     padding-right: 1rem;
-    @media (max-width: 768px) {
+    @media (max-width: 950px) {
         overflow: hidden;
         padding-right: 0;
+        padding-top: ${({ isOpen }) => (isOpen ? "5vh" : "0")};
         flex-direction: column;
         justify-content: flex-start;
         height: ${({ isOpen }) => (isOpen ? "95vh" : "0")};

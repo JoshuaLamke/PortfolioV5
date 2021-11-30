@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyledMenuLink} from './MenuLink.styled';
+import resume from '../../assets/Lamke_Joshua_Resume.pdf';
 
 interface Props {
     link: string;
@@ -9,7 +10,7 @@ interface Props {
 const MenuLink: React.FC<Props> = ({children, link, setIsOpen}) => {
 
     return (
-        <StyledMenuLink href={link} onClick={() => setIsOpen(false)}>
+        <StyledMenuLink href={link === "pdf" ? resume : link} target={link === "pdf" ? "_blank" : "_self"} rel="noreferrer" onClick={() => setIsOpen(false)}>
             {children}
         </StyledMenuLink>
     )

@@ -10,7 +10,7 @@ export const StyledHamburger = styled.div<Props>`
     cursor: pointer;
     padding-right: 1rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 950px) {
         display: flex;
     }
 `;
