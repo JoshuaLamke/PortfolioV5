@@ -1,0 +1,23 @@
+.email-form-input,  .email-form-input:focus {
+  background-color: #121212;
+  color: #67bc98!important;
+  border: 1px solid #67bc98;
+  box-shadow: none;
+}
+
+.email-form-input::placeholder {
+  color: #67bc98;
+}
+
+.email-form-input:focus {
+  filter: brightness(1.1);
+}
+
+.email-send-button {
+  width: clamp(9em, 9em + 2vw, 12em);
+  background-color: #434343;
+}
+
+.email-send-button:hover {
+  filter: brightness(0.8);
+}
