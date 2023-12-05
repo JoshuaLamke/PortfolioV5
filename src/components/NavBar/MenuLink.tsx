@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledMenuLink } from "./MenuLink.styled";
-import resume from "../../assets/Lamke Joshua Resume.pdf";
+import resume from "../../assets/Lamke_Joshua_Resume.pdf";
 
 interface Props {
   link: string;
